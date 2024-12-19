@@ -1,2 +1,2 @@
-# me
-Personal Website
+# Personal Website
+For accomplishments and projects

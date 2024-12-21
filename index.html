@@ -11,35 +11,64 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
             color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Cool gradient animation for the background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         header {
-            background: #333;
-            color: #fff;
-            padding: 20px;
             text-align: center;
+            padding: 50px 20px;
+            color: #fff;
         }
 
         header h1 {
             margin: 0;
+            font-size: 3em;
+        }
+
+        header p {
+            font-size: 1.2em;
         }
 
         nav {
-            background: #555;
-            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
             text-align: center;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav a {
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #ffcc00;
         }
 
         .container {
@@ -47,17 +76,18 @@
             margin: auto;
             overflow: hidden;
             padding: 20px;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.8);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
 
         section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         h2 {
-            color: #555;
-            border-bottom: 2px solid #333;
+            color: #333;
+            border-bottom: 2px solid #6a11cb;
             padding-bottom: 5px;
         }
 
@@ -69,7 +99,7 @@
         footer {
             text-align: center;
             padding: 10px;
-            background: #333;
+            background: rgba(0, 0, 0, 0.8);
             color: #fff;
             margin-top: 20px;
         }
@@ -77,12 +107,34 @@
         .project-title {
             font-weight: bold;
         }
+
+        /* Hover effect on project titles */
+        .project-title:hover {
+            color: #6a11cb;
+            transition: color 0.3s ease;
+        }
+
+        /* Floating animation for contact icons */
+        .contact-icon {
+            display: inline-block;
+            margin: 10px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Aniruddh Kommareddy</h1>
-        <p>Aerospace & Mechanical Dual Major | Controls/Fluids/Aerodynamics | Recent Graduate</p>
+        <p>Aerospace & Mechanical Engineer | Controls Enthusiast | Innovator</p>
     </header>
     <nav>
         <a href="#about">About</a>
@@ -94,11 +146,7 @@
         <section id="about">
             <h2>About Me</h2>
             <p>
-                Hello! My name is Aniruddh Kommareddy and I am currently a senior and part of a dual degree program as well as the honors college at the Missouri University of Science and Technology where I am pursuing both Mechanical and Aerospace degrees within 3.5 years.
-
-I have a breadth of knowledge within both the mechanical and aerospace fields; especially in manufacturing, automotive engineering, and aerodynamics. Specific technologies I am very comfortable working on include 3D Scanning, Autonomous Mobile Robots (AMRs), Hybrid Manufacturing specifically with Laser Metal Deposition (LMD), and Ultralight Aircraft Design and Analysis.
-
-My graduation date is May 2025.
+                I am an aspiring aerospace and mechanical engineer with a passion for controls, dynamic systems, and innovative solutions. My experience spans autonomous mobile robots, hybrid manufacturing, and control algorithms for cutting-edge technologies.
             </p>
         </section>
         <section id="projects">
@@ -131,9 +179,9 @@ My graduation date is May 2025.
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:aniruddhkommareddy@gmail.com">your-email@example.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/arkom/" target="_blank">linkedin.com/in/your-profile</a></p>
-            <p>GitHub: <a href="https://github.com/ARKinspace" target="_blank">github.com/your-username</a></p>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></p>
+            <p>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
         </section>
     </div>
     <footer>
